@@ -24,3 +24,12 @@ download_html:
 	wget "https://docs.google.com/spreadsheets/d/$(GOOGLE_SPREADSHEET_ID)/gviz/tq?tqx=out:html&sheet=distribution" -O schema/perfil-regional-metadatos-html/distribution.html
 	wget "https://docs.google.com/spreadsheets/d/$(GOOGLE_SPREADSHEET_ID)/gviz/tq?tqx=out:html&sheet=field" -O schema/perfil-regional-metadatos-html/field.html
 	wget "https://docs.google.com/spreadsheets/d/$(GOOGLE_SPREADSHEET_ID)/gviz/tq?tqx=out:html&sheet=theme" -O schema/perfil-regional-metadatos-html/theme.html
+
+download: download_xlsx download_csv download_html
+
+docs:
+	mkdocs build
+	$(BROWSER) site/index.html
+
+servedocs:
+	mkdocs serve

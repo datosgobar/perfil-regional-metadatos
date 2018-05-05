@@ -1,0 +1,5 @@
+site_name: Perfil Regional de Metadatos
+pages:
+- Inicio: index.md
+- Referencia: schema.md
+theme: readthedocs
