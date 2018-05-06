@@ -1,5 +1,17 @@
 GOOGLE_SPREADSHEET_ID = 1XVpFojav6Tn5sxX8r71V8aSafYJt66P4EHNRgoFX3DI
 
+.PHONY: all \
+		create_dir \
+		download_xlsx \
+		download_csv \
+		download_html \
+		download \
+		schema \
+		docs \
+		servedocs
+
+all: create_dir download schema docs
+
 create_dir:
 	mkdir -p docs
 	mkdir -p schema
@@ -26,6 +38,9 @@ download_html:
 	wget "https://docs.google.com/spreadsheets/d/$(GOOGLE_SPREADSHEET_ID)/gviz/tq?tqx=out:html&sheet=theme" -O schema/perfil-regional-metadatos-html/theme.html
 
 download: download_xlsx download_csv download_html
+
+schema:
+	python schema.py
 
 docs:
 	mkdocs build
