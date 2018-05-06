@@ -5,11 +5,10 @@ Anexos
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
  
 
-- [Anexos](#anexos)
-    - [Anexo I - Taxonomía temática (tabla)](#anexo-i-taxonomia-tematica-tabla)
-    - [Anexo II - Taxonomía temática (JSON)](#anexo-ii-taxonomia-tematica-json)
-    - [Anexo III - Pautas para la selección de etiquetas](#anexo-iii-pautas-para-la-seleccion-de-etiquetas)
-    - [Anexo IV - Especificación de frecuencias (según ISO-8601)](#anexo-iv-especificacion-de-frecuencias-segun-iso-8601)
+- [Anexo I - Taxonomía temática (tabla)](#anexo-i-taxonomia-tematica-tabla)
+- [Anexo II - Taxonomía temática (JSON)](#anexo-ii-taxonomia-tematica-json)
+- [Anexo III - Pautas para la selección de etiquetas](#anexo-iii-pautas-para-la-seleccion-de-etiquetas)
+- [Anexo IV - Especificación de frecuencias (según ISO-8601)](#anexo-iv-especificacion-de-frecuencias-segun-iso-8601)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
