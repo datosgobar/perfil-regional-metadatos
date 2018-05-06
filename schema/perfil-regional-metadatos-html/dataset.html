@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>dataset</title>
+</head>
+<body>
+<table border="1" cellpadding="2" cellspacing="0">
+<tr style="font-weight: bold; background-color: #aaa;">
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Nombre</td><td>Requerido</td><td>Descripción</td><td>Ejemplo</td><td>Variable</td><td>Tipo</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Identificador</td><td>Si</td><td>Identificador único del dataset, este identificador debe ser único para todo el catálogo.</td><td>&quot;dataset-ejemplo-35782”</td><td>identifier</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Título</td><td>Si</td><td>Nombre asignado al dataset tal como será publicado.
+
+Debe ser claro y lo suficientemente abstracto como para abarcar la multiplicidad de distribuciones que contiene. Se recomienda no exceder los 100 caracteres en la mayoría de los casos.</td><td>Sistema de contrataciones electrónicas</td><td>title</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Descripción</td><td>Si</td><td>Descripción del contenido del dataset de un modo claro y conciso.
+
+Se recomienda no exceder los 500 caracteres en la mayoría de los casos.</td><td>Datos correspondiente al Sistema de Contrataciones Electrónicas (Argentina Compra)</td><td>description</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Autor</td><td>Si</td><td>Autoridad responsable de la publicación del dataset. 
+
+Se recomienda adoptar un vocabulario controlado con las dependencias del país de que se trate y definir una forma de expresar la pertenencia jerárquica de la organización (Ej.: utilizar puntos o guiones medios para separar niveles jerárquicos, expresarlos en forma descendente o ascendente, etc.)</td><td>Ministerio de Modernización. Secretaría de Modernización Administrativa. Oficina Nacional de Contrataciones.</td><td>publisher -&gt; name</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Correo electrónico del autor</td><td>R</td><td>Correo electrónico de contacto de la autoridad responsable de la publicación del dataset.</td><td>onc@modernizacion.gob.ar</td><td>publisher -&gt; mbox</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Área/Persona de contacto</td><td>R</td><td>Área/persona de contacto que puede brindar información relevante sobre el dataset. Este es un punto de contacto más próximo al mantenimiento u operación de este dataset.</td><td>Ministerio de Modernización. Secretaría de Modernización Administrativa. Oficina Nacional de Contrataciones. Dirección de Compras Electrónicas.</td><td>contactPoint -&gt; fn</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Correo electrónico del área/persona de contacto</td><td>R</td><td>Correo electrónico del área/persona de contacto que puede brindar información relevante sobre el dataset.</td><td>onc-compraselectronicas@modernizacion.gob.ar</td><td>contactPoint -&gt; hasEmail</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Fuente primaria</td><td>No</td><td>Fuente original o primaria de los datos publicados en el dataset. Se utiliza cuando la entidad responsable de la publicación del dataset, no es la entidad que produce los datos.</td><td>Ministerio de Hacienda. Instituto Nacional de Estadísticas y Censos. Dirección Nacional de Cuentas Nacionales.</td><td>attribution</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Colaboradores</td><td>No</td><td>Entidades, organizaciones o personas adicionales que son o fueron responsables de recolectar, crear o contribuir en forma alguna al desarrollo del activo de datos. Los valores deben separarse por comas.</td><td>Instituto Argentino de Análisis Fiscal</td><td>contributor</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Distribuciones</td><td>Si</td><td>Lista de distribuciones que pertenecen al dataset y sus metadatos. Cada distribución se representa con un objeto (&quot;{}&quot;) donde se describen los metadatos especificados para la clase &quot;distribution&quot; de este perfil de metadatos.</td><td>[{...}, {...}]</td><td>distribution</td><td>Array</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Temática(s)</td><td>R</td><td>Temática/s o categoría/s a la/s que se refiere el dataset al ser publicado.
+
+Un dataset puede pertenecer a más de una categoría temática, de manera que el tipo de valor de este campo es una lista de categorías. La taxonomía a utilizar debe ser creada por la autoridad responsable del catálogo. Se deben usar los ids (ver campo &quot;id&quot; de la clase Theme) de los temas definidos en la taxonomía para componer la lista (no se deben usar las etiquetas ni las descripciones).</td><td>[&quot;gove&quot;, &quot;econ&quot;]</td><td>theme</td><td>Array</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Fecha de publicación</td><td>Si</td><td>Fecha de publicación del dataset. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.</td><td>&quot;2016-04-14T19:48:05.433640&quot; para especificar fecha y hora
+
+&quot;2016-04-14&quot; para especificar fecha únicamente</td><td>issued</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Fecha de última actualización/ modificación</td><td>R</td><td>Fecha de última actualización/modificación de dataset (ya sea de sus datos o de sus metadatos). Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.
+</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
+
+&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>modified</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Fecha de última actualización/ modificación</td><td>R</td><td>Fecha de última actualización/modificación de los datos del dataset. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.
+</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
+
+&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>dataModified</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Fecha de última actualización/ modificación</td><td>R</td><td>Fecha de última actualización/modificación de los metadatos del dataset. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.
+</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
+
+&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>metadataModified</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Frecuencia de actualización</td><td>Si</td><td>Frecuencia con la que se actualiza el dataset.
+
+Se recomienda especificar períodos normalizados con formato ISO-8601, agregando el campo “eventual” para datasets que se publican con una frecuencia eventual o no especificada. Anexo &quot;Especificación de frecuencias según ISO-8601&quot;.</td><td>“R/P1Y” para datasets que se actualizan anualmente</td><td>accrualPeriodicity</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Página de referencia</td><td>R</td><td>URL de la página web a través de la cual se puede acceder al dataset, sus recursos o información adicional sobre el mismo.</td><td>http://datos.gob.ar/dataset/sistema-de-contrataciones-electronicas-argentina-compra</td><td>landingPage</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Etiqueta(s)</td><td>R</td><td>Palabras que describen el título o el contenido del recurso.
+
+Es necesario que las etiquetas se encuentren correctamente escritas, en plural y respetando la existencia de tags anteriores. Etiquetas que colaboran en la búsqueda de los usuarios. Cuanto más amplia y uniforme sea la lista de tags mayor será su eficiencia. A tales fines se recomienda ver el Anexo “Pautas para la selección de etiquetas”.</td><td>[&quot;bienes&quot;, &quot;compras&quot;,&quot;contrataciones&quot;]</td><td>keyword</td><td>Array</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Cobertura temporal</td><td>R</td><td>Período de tiempo cubierto por el dataset.
+
+El intervalo de tiempo está formado por una fecha de inicio y una de fin separadas por “/”, en formato ISO 8601, con el nivel de especificidad requerido por el dataset. Opcionalmente, se puede especificar una sola fecha (en lugar de dos) y esta se interpretará como la fecha de inicio, mientras que el final permanece no especificado.</td><td>2015-01-01/2015-12-31
+
+2015-01-01T00:45:00Z/2016-01-15T00:06:00Z
+
+2015-01-01
+
+2015-01-01T00:45:00Z</td><td>temporal</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Licencia</td><td>R</td><td>Indica la licencia bajo la cual el dataset y todas sus distribuciones están disponibles mediante un enlace a la licencia o documento de la licencia seleccionada, o mediante el título textual de la licencia tal como aparece en la lista de http://opendefinition.org/licenses/ . Se recomienda utilizar la licencia &quot;Open Database License (ODbL) v1.0&quot;. Un dataset hereda por default la licencia general del catálogo salvo que se especifique una licencia diferente en este campo. Las distribuciones del dataset heredan esta licencia salvo que especifiquen una diferente.</td><td>&quot;http://opendatacommons.org/licenses/dbcl/1-0/&quot; si se utiliza un enlace
+
+&quot;Open Database License (ODbL) v1.0&quot; si se consigna el nombre de la licencia a utilizar</td><td>license</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Idioma(s)</td><td>No</td><td>Lenguaje para la descripción de los metadatos del dataset. Hay 2 estándares ISO que pueden ser utilizados para este campo:
+
+(a) ISO 639-1 (2 letras)
+(b) ISO 639-2/T (3 letras) es el más recomendado.
+
+Puede definirse 1 o más lenguajes en una lista. Los lenguajes especificados para un dataset, sobreesriben a los del catálogo. Si este campo está vacío el dataset hereda los lenguajes del catálogo. (Link a los estándares ISO: https://www.loc.gov/standards/iso639-2/php/code_list.php)</td><td>[&quot;es&quot;] para un lenguaje ISO 639-1
+
+[&quot;spa&quot;, ”eng&quot;] para dos lenguajes ISO 639-2</td><td>language</td><td>Array</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Cobertura geográfica</td><td>No</td><td>Una región o lugar determinado al que el dataset haga referencia.
+
+Una región o un lugar determinado. Puede tomar valores:
+
+a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
+b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
+c) un punto geográfico representado por latitud/longitud.
+d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
+http://sws.geonames.org/6255146&quot;</td><td>&quot;ARG&quot; es el código para la República Argentina.
+
+&quot;06007&quot; es el código de un departamento
+
+[-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
+
+[-58.111111, -35.111111] es un punto geográfico
+
+&quot;http://sws.geonames.org/6255146&quot;</td><td>spatial</td><td>Array or String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Jerarquía, orden o nivel jurisdiccional</td><td>No</td><td>Clasificación del dataset por su jerarquía, orden o nivel jurisdiccional. Indica el tipo y alcance de la jurisdicción legal que está detrás de la publicación del dataset. 
+
+El valor puede ser &quot;national&quot; o &quot;territorial&quot; (cubriendo el caso nacional por un lado y todas las jurisdicciones sub-nacionales por otro), o pertenecer a un vocabulario controlado alternativo definido por el país o la organización responsable de la política de apertura (Ej.: &quot;federal&quot;, &quot;provincial&quot; o &quot;municipal&quot;).</td><td>&quot;national&quot;
+
+&quot;territorial&quot;</td><td>jurisdiction</td><td>String</td>
+</tr>
+</table>
+</body>
+</html>

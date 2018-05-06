@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>field</title>
+</head>
+<body>
+<table border="1" cellpadding="2" cellspacing="0">
+<tr style="font-weight: bold; background-color: #aaa;">
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Nombre</td><td>Requerido</td><td>Descripción</td><td>Ejemplo</td><td>Variable</td><td>Tipo</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Nombre</td><td>R</td><td>El nombre del campo tal como se denomina en el encabezado de la distribución. Véase la &quot;Guía para la publicación de datos en formatos abiertos&quot; para una adecuada elección del nombre de un campo. 
+
+Se recomienda no exceder los 40 caracteres en la mayoría de los casos. En caso de que un título más largo se juzgue necesario o significativamente más claro, este no deberá exceder los 60 caracteres en ningún caso.
+
+Debe estar compuesto por letras minúsculas de la &quot;a&quot; a la &quot;z&quot; sin caracteres especiales (sin tildes y sin la &quot;ñ&quot;), números y guiones bajos &quot;_&quot;.</td><td>Ejemplo para el cuarto campo de la distribución &quot;Convocatorias abiertas durante el año 2015&quot;, valor para el nombre: &quot;unidad_operativa_contrataciones_desc&quot;</td><td>title</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Tipo </td><td>R</td><td>El tipo de dato contenido en el campo según la lista utilizada por la librería recline.js (http://okfnlabs.org/recline/docs/models.html#types). 
+
+Los tipos incluidos en esta lista son:
+
+string (text): Valores de texto.
+number (double, float, numeric): Números que puedan no ser enteros (incluyen decimales).
+integer (int): Números que siempre son enteros.
+date: Fecha simple expresada según el estándar ISO 8601 incluyendo únicamente año, mes y día (YYYY-MM-DD) como en &quot;2016-02-01&quot;.
+time: Tiempo expresado según el estándar ISO 8601 incluyendo únicamente horas, minutos y segundos (hh:mm:ss) como en &quot;10:05:00&quot;.
+date-time (datetime, timestamp): Fecha completa expresada según el estándar ISO 8601 incluyendo año, mes, día, horas, minutos y segundos (YYYY-MM-DDThh:mm:ssZ) como en &quot;2016-02-01T10:05:00+03:00&quot;
+boolean (bool): Valores verdadero/falso.
+binary: Representación de datos binarios base64.
+geo_point: Ver estructura en https://www.elastic.co/guide/en/elasticsearch/reference/current/geo-point.html.
+geojson: Ver en http://geojson.org/
+array: Lista de valores.
+object (json): Objeto de JSON.
+any: Campo que puede contener valores de cualquier tipo.</td><td>Ejemplo para el campo &quot;unidad_operativa_contrataciones_desc&quot; de la distribución &quot;Convocatorias abiertas durante el año 2015&quot;, valor para tipo: &quot;string&quot;</td><td>type</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Descripción</td><td>R</td><td>La descripción completa de la información que contiene el campo. Debe ser suficientemente precisa y explicativa para que el usuario de los datos comprenda cabalmente cómo utilizar los datos de este campo.</td><td>Ejemplo para el campo &quot;unidad_operativa_contrataciones_desc&quot; de la distribución &quot;Convocatorias abiertas durante el año 2015&quot;, valor para descripción: &quot;Organismo que realiza la convocatoría. Organismo de máximo nivel jerárquico al que pertenece la unidad operativa de contrataciones.&quot;</td><td>description</td><td>String</td>
+</tr>
+<tr style="background-color: #f0f0f0">
+<td>Unidad de medida</td><td>No</td><td>La descripción de la unidad de medida en la que están expresados los valores del campo. Sólo se utiliza para campos de tipo numérico.</td><td>Millones de pesos a precios de 1993</td><td>units</td><td>String</td>
+</tr>
+<tr style="background-color: #ffffff">
+<td>Cobertura geográfica</td><td>No</td><td>Una región o lugar determinado al que el dataset haga referencia.
+
+Una región o un lugar determinado. Puede tomar valores:
+
+a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
+b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
+c) un punto geográfico representado por latitud/longitud.
+d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
+http://sws.geonames.org/6255146&quot;</td><td>&quot;ARG&quot; es el código para la República Argentina.
+
+&quot;06007&quot; es el código de un departamento
+
+[-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
+
+[-58.111111, -35.111111] es un punto geográfico
+
+&quot;http://sws.geonames.org/6255146&quot;</td><td>spatial</td><td>String</td>
+</tr>
+</table>
+</body>
+</html>

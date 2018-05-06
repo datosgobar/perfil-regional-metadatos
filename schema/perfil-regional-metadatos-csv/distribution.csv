@@ -1,0 +1,69 @@
+"Nombre","Requerido","Descripción","Ejemplo","Variable","Tipo"
+"Identificador","Si","Identificador único de la distribución, este identificador debe ser único para la distribución dentro del catálogo completo.
+
+Debe estar compuesto por letras mayúsculas o minúsculas de la ""a"" a la ""z"" sin caracteres especiales (sin tildes y sin la ""ñ""), números, guiones bajos ""_"", guiones medios ""-"" y puntos ""."".","1.2","identifier","String"
+"Título","Si","Nombre asignado a la distribución.","Convocatorias abiertas durante el año 2015","title","String"
+"Descripción","R","Breve descripción de la distribución. Se recomienda no escribir más de una línea. Toda información adicional puede ser incluida en la descripción del dataset.","Listado de las convocatorias abiertas durante el año 2015 en el sistema de contrataciones electrónicas","description","String"
+"URL de descarga","Si","URL que permite la descarga directa de la distribución del dataset, vincula directamente a un archivo descargable en un formato dado.","http://datos.gob.ar/dataset/becaceb2-dbd0-4879-93bd-5f02bd3b8ca2/resource/bf2f67f4-9ab3-479b-a881-56b43565125e/download/contratos-2015.csv","downloadURL","String"
+"URL de acceso","Si","URL que permite el acceso a la distribución del dataset. Puede ser una página, feed u otro tipo de recurso que dé acceso indirecto a las distribuciones. Si las distribuciones son solo accesibles a través de la página de referencia del dataset, debe completarse el valor de la URL de acceso a la distribución con el mismo valor de la página de referencia del dataset.","http://datos.gob.ar/dataset/sistema-de-contrataciones-electronicas-argentina-compra/archivo/fa3603b3-0af7-43cc-9da9-90a512217d8a","accessURL","String"
+"Campos de la distribución","R","Lista de campos que contiene una distribución tabular (no aplica para aquellas distribuciones que no sean tablas) y sus metadatos. Cada campo se representa con un objeto (""{}"") donde se describen los metadatos especificados para la clase ""field"" de este perfil de metadatos (como ""nombre"", ""tipo"" y ""descripción"").","[{...}, {...}]","field","Array"
+"Fecha de publicación","Si","Fecha de publicación de la distribución. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.","""2016-04-14T19:48:05.433640"" para especificar fecha y hora
+
+""2016-04-14"" para especificar fecha únicamente","issued","String"
+"Fecha de última actualización/ modificación","R","Fecha de última actualización/modificación de la distribución. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.","""2016-04-19T19:48:05.433640"" para especificar fecha y hora
+
+""2016-04-19"" para especificar fecha únicamente","modified","String"
+"Fecha de última actualización/ modificación","R","Fecha de última actualización/modificación de los datos del distribución. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el distribución.
+","""2016-04-19T19:48:05.433640"" para especificar fecha y hora
+
+""2016-04-19"" para especificar fecha únicamente","dataModified","String"
+"Fecha de última actualización/ modificación","R","Fecha de última actualización/modificación de los metadatos del distribución. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el distribución.
+","""2016-04-19T19:48:05.433640"" para especificar fecha y hora
+
+""2016-04-19"" para especificar fecha únicamente","metadataModified","String"
+"Formato del archivo","R","Indica el formato del archivo de la distribución. Si el tipo de la distribución está definido por IANA (http://www.iana.org/assignments/media-types/media-types.xml), debe usarse esa definición. En caso contrario deberán ponerse los caracteres después del punto final del archivo, que determinan el formato (cuando no está definido por IANA).","""text/csv"" definición de IANA
+
+""csv"" caracteres finales después del punto","format","String"
+"Licencia","R","Indica la licencia bajo la cual la distribución está disponible mediante un enlace a la licencia o documento de la licencia seleccionada, o mediante el título textual de la licencia tal como aparece en la lista de http://opendefinition.org/licenses/ . Se recomienda utilizar la licencia ""Open Database License (ODbL) v1.0"". Una distribución hereda por default la licencia del dataset al que pertenece, salvo que se especifique una licencia diferente en este campo.","""http://opendatacommons.org/licenses/dbcl/1-0/"" si se utiliza un enlace
+
+""Open Database License (ODbL) v1.0"" si se consigna el nombre de la licencia a utilizar","license","String"
+"Tipo de archivo","No","Indica el tipo de archivo de la distribución, sólo si este está definido por IANA (http://www.iana.org/assignments/media-types/media-types.xml). En caso contrario este campo permanece vacío.","""text/csv"" definición de IANA
+
+"""" cuando el formato no tiene definición en IANA","mediaType","String"
+"Tamaño","No","Tamaño de la distribución en bytes. El tamaño puede ser aproximado cuando no se conozca el tamaño exacto.","Ejemplo para un archivo de 5Kb aproximadamente: ”5120”","byteSize","Integer"
+"Derechos sobre la distribución","No","Información sobre derechos aplicables a la distribución que no se hayan especificado en la licencia. Si se especifican, estos derechos sobreescriben a los del catálogo. En caso contrario, las distribuciones heredan los derechos especificados para el catálogo.","","rights","String"
+"Tipo de distribución","R","Indica el tipo de recurso.
+
++ ""Archivo de datos"" (file): archivo físico de algún formato de datos que se puede descargar.
++ ""API"" (api): documentación en línea de un servicio web de datos.
++ ""Código"" (code): repositorio o archivo con scripts utilizados para la generación, transformación, limpieza o validación de los datos de todo o parte del dataset.
++ ""Documentación"" (documentation): documentación metodológica sobre los datos de todo o parte del dataset.","""file""","type","String"
+"Identificador del dataset","Si","La clave que identifica al conjunto de datos al que pertenece (y bajo el que se agrupa) este recurso.","""dataset-ejemplo-35782”","datasetIdentifier","String"
+"Cobertura temporal","No","Período de tiempo cubierto por la distribución.
+
+El intervalo de tiempo está formado por una fecha de inicio y una de fin separadas por “/”, en formato ISO 8601, con el nivel de especificidad requerido por el dataset. Opcionalmente, se puede especificar una sola fecha (en lugar de dos) y esta se interpretará como la fecha de inicio, mientras que el final permanece no especificado.","2015-01-01/2015-12-31
+
+2015-01-01T00:45:00Z/2016-01-15T00:06:00Z
+
+2015-01-01
+
+2015-01-01T00:45:00Z","temporal","String"
+"Cobertura geográfica","No","Una región o lugar determinado al que el dataset haga referencia.
+
+Una región o un lugar determinado. Puede tomar valores:
+
+a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
+b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
+c) un punto geográfico representado por latitud/longitud.
+d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
+http://sws.geonames.org/6255146""","""ARG"" es el código para la República Argentina.
+
+""06007"" es el código de un departamento
+
+[-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
+
+[-58.111111, -35.111111] es un punto geográfico
+
+""http://sws.geonames.org/6255146""","spatial","String"
+"Nomencladores utilizados","No","Nombres de los estándares de los códigos, nomencladores o clasificadores utilizados en la distribución.","ISO 8601","codelists","String"
+"URLs documentación nomencladores","No","Hipervínculos a las fuentes oficiales de los códigos y estándares utilizados.","https://www.w3.org/TR/NOTE-datetime","codelistlink","String"

@@ -23,6 +23,7 @@ Siguiendo estos 3 principios como guía, el Perfil Regional de Metadatos:
     - Si un campo no obligatorio está definido en el perfil base, es preferible utilizar ese antes de crear uno nuevo.
     - Crea nuevos campos de metadatos, que resuelven casos de uso no previstos por DCAT-AP.
 * **Reutiliza soluciones en uso por los países de la región**. Agrega campos de metadatos adicionales en base a la experiencia de su uso en otros países.
+* **Define nombres de variables en inglés y en _lowerCamelCase_**, en sintonía con los nombres del perfil DCAT.
 
 
 

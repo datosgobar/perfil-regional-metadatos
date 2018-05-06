@@ -1,0 +1,4 @@
+"Nombre","Requerido","Descripción","Ejemplo","Variable","Tipo"
+"Identificador","R","El identificador del tema.","AGRI","id","String"
+"Título","R","La etiqueta o título de un tema.","Agricultura, pesca, silvicultura y alimentación","label","String"
+"Descripción","R","Una breve y concisa descripción del tema.","Bajo este concepto se incluyen datasets que cubren dominios tales como agricultura, pesca, forestación o alimentos.","description","String"
