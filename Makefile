@@ -10,7 +10,7 @@ GOOGLE_SPREADSHEET_ID = 1XVpFojav6Tn5sxX8r71V8aSafYJt66P4EHNRgoFX3DI
 		docs \
 		servedocs
 
-all: create_dir download schema docs
+all: create_dir download schema doctoc docs
 
 create_dir:
 	mkdir -p docs
@@ -41,6 +41,11 @@ download: download_xlsx download_csv download_html
 
 schema:
 	python schema.py
+
+doctoc: ## generate table of contents, doctoc command line tool required
+        ## https://github.com/thlorenz/doctoc
+	doctoc --github --title " " docs/schema.md
+	bash fix_github_links.sh docs/schema.md
 
 docs:
 	mkdocs build

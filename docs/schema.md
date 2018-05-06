@@ -2,6 +2,20 @@
 Referencia
 ===
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+ 
+
+- [Esquema](#esquema)
+- [Campos del perfil](#campos-del-perfil)
+    - [Catálogo (`catalog`)](#catalogo-catalog)
+    - [Dataset (`dataset`)](#dataset-dataset)
+    - [Distribución (`distribution`)](#distribucion-distribution)
+    - [Campo (`field`)](#campo-field)
+    - [Tema (`theme`)](#tema-theme)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Esquema
 
 ![schema](assets/schema.png)

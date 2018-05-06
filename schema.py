@@ -29,6 +29,10 @@ def generate_markdown_schema(schema_path):
 Referencia
 ===
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Esquema
 
 {schema}
