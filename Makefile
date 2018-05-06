@@ -46,6 +46,8 @@ doctoc: ## generate table of contents, doctoc command line tool required
         ## https://github.com/thlorenz/doctoc
 	doctoc --github --title " " docs/schema.md
 	bash fix_github_links.sh docs/schema.md
+	doctoc --github --title " " docs/annex.md
+	bash fix_github_links.sh docs/annex.md
 
 docs:
 	mkdocs build

@@ -2,5 +2,6 @@ site_name: Perfil Regional de Metadatos
 pages:
 - Inicio: index.md
 - Referencia: schema.md
+- Anexos: annex.md
 theme: readthedocs
 extra_css: [custom_style.css]

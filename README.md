@@ -1,5 +1,7 @@
 # perfil-regional-metadatos
 
+[![Documentation Status](http://readthedocs.org/projects/paquete-apertura-datos/badge/?version=stable)](http://paquete-apertura-datos.readthedocs.org/es/stable/?badge=stable)
+
 Repositorio para la elaboración, discusión y publicación del Perfil Regional de Metadatos impulsado por el Grupo de Trabajo de Datos Abiertos de la Red GEALC.
 
 ## Documentación
