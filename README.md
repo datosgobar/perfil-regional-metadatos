@@ -11,6 +11,7 @@ El Perfil Regional de Metadatos se compila en Read The Docs: http://perfil-regio
 ## Estructura del repositorio
 
 * **docs**: documentación y guías de buenas prácticas.
+* **schema**: publicación del PRM en distintos formatos.
 * **standards**: recursos que compilan estándares recomendados en el perfil o vocabularios controlados, en formatos fáciles de consumir desde un script.
 
 ## Cómo contribuir
