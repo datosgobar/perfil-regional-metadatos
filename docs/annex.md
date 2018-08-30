@@ -14,7 +14,9 @@ Anexos
 
 ## Anexo I - Taxonomía temática (tabla)
 
-El Perfil Regional de Metadatos propone el uso de la [taxonomía temática definida por la Unión Europea](http://publications.europa.eu/mdr/authority/data-theme/index.html).
+El Perfil Regional de Metadatos propone el uso de la [taxonomía temática definida por la Unión Europea](http://publications.europa.eu/mdr/authority/data-theme/index.html) para la mayoría de los casos.
+
+Esta taxonomía está formada por 13 temas generales, bajo los cuales cualquier activo de datos puede ser clasificado. Sin embargo **algunos países podrían querer desarrollar una taxonomía temática más detallada**, con temas más específicos.
 
 <table>
   <colgroup>
@@ -98,7 +100,7 @@ El Perfil Regional de Metadatos propone el uso de la [taxonomía temática defin
 
 ## Anexo II - Taxonomía temática (JSON)
 
-Esta es la [taxonomía temática global](https://raw.githubusercontent.com/datosgobar/perfil-regional-metadatos/master/standards/themeTaxonomy.json):
+Esta es la [taxonomía temática de la Unión Europea](https://raw.githubusercontent.com/datosgobar/perfil-regional-metadatos/master/standards/themeTaxonomy.json) en formato JSON:
 
 ```json
 [
