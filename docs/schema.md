@@ -8,11 +8,11 @@ Referencia
 
 - [Esquema](#esquema)
 - [Campos del perfil](#campos-del-perfil)
-    - [Catálogo (`catalog`)](#catalogo-catalog)
-    - [Dataset (`dataset`)](#dataset-dataset)
-    - [Distribución (`distribution`)](#distribucion-distribution)
-    - [Campo (`field`)](#campo-field)
-    - [Tema (`theme`)](#tema-theme)
+  - [Catálogo (`catalog`)](#catalogo-catalog)
+  - [Dataset (`dataset`)](#dataset-dataset)
+  - [Distribución (`distribution`)](#distribucion-distribution)
+  - [Campo (`field`)](#campo-field)
+  - [Tema (`theme`)](#tema-theme)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -69,34 +69,34 @@ Puede definirse 1 o más lenguajes en una lista. (Link a los estándares ISO: ht
 
 Compone una lista de temas que se pueden usar para clasificar los datasets del catálogo. Si se clasifica a algún dataset del catálogo como perteneciente a uno o más temas, este campo es obligatorio ya que se debe explicitar una taxonomía temática para poder usar sus temas.
 
-Para catálogos nacionales o que reúnen datasets de temáticas variadas, se recomienda utilizar la taxonomía temática de la Unión Europea (Ver standards/themeTaxonomy).                                                                                                                                                                                                                                                            </td><td>[{...}, {...}]                                                 </td><td>themeTaxonomy        </td><td>Array          </td></tr>
+Para catálogos nacionales o que reúnen datasets de temáticas variadas, se recomienda utilizar la taxonomía temática de la Unión Europea (Ver standards/themeTaxonomy). Esta taxonomía está formada por 13 temas generales, bajo los cuales cualquier activo de datos puede ser clasificado. Sin embargo algunos países podrían querer desarrollar una taxonomía temática más detallada, con temas más específicos.                                                                                                                                                                                                                                                            </td><td>[{...}, {...}]                                                 </td><td>themeTaxonomy        </td><td>Array          </td></tr>
 <tr><td>Licencia                                   </td><td>R          </td><td>Indica la licencia bajo la cual todos los datasets y distribuciones del catálogo están disponibles mediante un enlace a la licencia o documento de la licencia seleccionada, o mediante el título textual de la licencia tal como aparece en la lista de http://opendefinition.org/licenses/.
 
 Se recomienda utilizar la licencia "Open Database License (ODbL) v1.0". Un dataset o distribución que especifique una licencia diferente, sobreescribe a la licencia general del catálogo.                                                                                                                                                                                                                                                            </td><td>"http://opendatacommons.org/licenses/dbcl/1-0/" si se utiliza un enlace
 
 "Open Database License (ODbL) v1.0" si se consigna el nombre de la licencia a utilizar                                                                </td><td>license              </td><td>String         </td></tr>
 <tr><td>Página web del catálogo                    </td><td>R          </td><td>Dirección web o enlace de acceso a la página principal del catálogo                                                                                                                                                                                        </td><td>http://datos.gob.ar                                            </td><td>homepage             </td><td>String         </td></tr>
-<tr><td>Derechos sobre el catálogo                 </td><td>No         </td><td>Información sobre derechos aplicables al catálogo en el caso que no se hayan especificado en la licencia. Los datasets y sus distribuciones heredan la información sobre derechos aplicables al catálogo, a menos que especifiquen unos derechos distintos.</td><td>nan                                                            </td><td>rights               </td><td>String         </td></tr>
-<tr><td>Cobertura geográfica                       </td><td>No         </td><td>El área geográfica cubierta por el catálogo.
+<tr><td>Version del perfil de metadatos            </td><td>R          </td><td>Es la versión del perfil de metadatos utilizada en el catálogo.
+
+Se utiliza para que distintas aplicaciones reconozcan y validen los metadatos del catálogo, y las funcionalidades disponibles para distintos fines.                                                                                                                                                                                                                                                            </td><td>1.0                                                            </td><td>metadataSchemeVersion</td><td>String         </td></tr>
+<tr><td>Cobertura geográfica                       </td><td>No         </td><td>El área geográfica cubierta por el catálogo. Esta se puede expresar mediante diferentes estándares. Se recomienda el desarrollo de una guía de unidades territoriales y político-administrativas específica para el país que administra el catálogo, donde se especifiquen los códigos oficiales que deben usarse para señalar cobertura geográfica.
 
 Una región o un lugar determinado. Puede tomar valores:
 
-a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
+a) de países, provincias, departamentos, condados, municipios o localidades, según las recomendaciones de la guía de unidades territoriales o político-administrativas oficial del país que administra el catálogo.
 b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
 c) un punto geográfico representado por latitud/longitud.
-d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
+d) Si la referencia geográfica no está incluida en la guía de unidades territoriales o político-administrativas oficial, se puede indicar la URIs según geonames.org; ej :
 http://sws.geonames.org/6255146                                                                                                                                                                                                                                                            </td><td>"ARG" es el código para la República Argentina.
 
-"06007" es el código de un departamento
+"06007" es el código de un departamento en Argentina
 
 [-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
 
 [-58.111111, -35.111111] es un punto geográfico
 
 "http://sws.geonames.org/6255146"                                                                </td><td>spatial              </td><td>String or Array</td></tr>
-<tr><td>Version del perfil de metadatos            </td><td>R          </td><td>Es la versión del perfil de metadatos utilizada en el catálogo.
-
-Se utiliza para que distintas aplicaciones reconozcan y validen los metadatos del catálogo, y las funcionalidades disponibles para distintos fines.                                                                                                                                                                                                                                                            </td><td>1.0                                                            </td><td>metadataSchemeVersion</td><td>String         </td></tr>
+<tr><td>Derechos sobre el catálogo                 </td><td>No         </td><td>Información sobre derechos aplicables al catálogo en el caso que no se hayan especificado en la licencia. Los datasets y sus distribuciones heredan la información sobre derechos aplicables al catálogo, a menos que especifiquen unos derechos distintos.</td><td>nan                                                            </td><td>rights               </td><td>String         </td></tr>
 </tbody>
 </table>
 
@@ -167,15 +167,17 @@ Puede definirse 1 o más lenguajes en una lista. Los lenguajes especificados par
 ["spa", ”eng"] para dos lenguajes ISO 639-2                                                                                                                                                </td><td>language                </td><td>Array          </td></tr>
 <tr><td>Cobertura geográfica                           </td><td>No         </td><td>Una región o lugar determinado al que el dataset haga referencia.
 
+Esta se puede expresar mediante diferentes estándares. Se recomienda el desarrollo de una guía de unidades territoriales y político-administrativas específica para el país que administra el catálogo, donde se especifiquen los códigos oficiales que deben usarse para señalar cobertura geográfica.
+
 Una región o un lugar determinado. Puede tomar valores:
 
-a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
+a) de países, provincias, departamentos, condados, municipios o localidades, según las recomendaciones de la guía de unidades territoriales o político-administrativas oficial del país que administra el catálogo.
 b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
 c) un punto geográfico representado por latitud/longitud.
-d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
-http://sws.geonames.org/6255146"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </td><td>"ARG" es el código para la República Argentina.
+d) Si la referencia geográfica no está incluida en la guía de unidades territoriales o político-administrativas oficial, se puede indicar la URIs según geonames.org; ej :
+http://sws.geonames.org/6255146                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </td><td>"ARG" es el código para la República Argentina.
 
-"06007" es el código de un departamento
+"06007" es el código de un departamento en Argentina
 
 [-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
 
@@ -200,6 +202,7 @@ El valor puede ser "national" o "territorial" (cubriendo el caso nacional por un
 <tr><td>Identificador                              </td><td>Si         </td><td>Identificador único de la distribución, este identificador debe ser único para la distribución dentro del catálogo completo.
 
 Debe estar compuesto por letras mayúsculas o minúsculas de la "a" a la "z" sin caracteres especiales (sin tildes y sin la "ñ"), números, guiones bajos "_", guiones medios "-" y puntos ".".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </td><td>1.2                                                                                                                                       </td><td>identifier       </td><td>String </td></tr>
+<tr><td>Identificador del dataset                  </td><td>Si         </td><td>La clave que identifica al conjunto de datos al que pertenece (y bajo el que se agrupa) este recurso.                                                                                                                                                                                                                                                                                                                                                                           </td><td>"dataset-ejemplo-35782”                                                                                                                   </td><td>datasetIdentifier</td><td>String </td></tr>
 <tr><td>Título                                     </td><td>Si         </td><td>Nombre asignado a la distribución.                                                                                                                                                                                                                                                                                                                                                                                                                                              </td><td>Convocatorias abiertas durante el año 2015                                                                                                </td><td>title            </td><td>String </td></tr>
 <tr><td>Descripción                                </td><td>R          </td><td>Breve descripción de la distribución. Se recomienda no escribir más de una línea. Toda información adicional puede ser incluida en la descripción del dataset.                                                                                                                                                                                                                                                                                                                  </td><td>Listado de las convocatorias abiertas durante el año 2015 en el sistema de contrataciones electrónicas                                    </td><td>description      </td><td>String </td></tr>
 <tr><td>URL de descarga                            </td><td>Si         </td><td>URL que permite la descarga directa de la distribución del dataset, vincula directamente a un archivo descargable en un formato dado.                                                                                                                                                                                                                                                                                                                                           </td><td>http://datos.gob.ar/dataset/becaceb2-dbd0-4879-93bd-5f02bd3b8ca2/resource/bf2f67f4-9ab3-479b-a881-56b43565125e/download/contratos-2015.csv</td><td>downloadURL      </td><td>String </td></tr>
@@ -226,15 +229,31 @@ Debe estar compuesto por letras mayúsculas o minúsculas de la "a" a la "z" sin
 <tr><td>Tipo de archivo                            </td><td>No         </td><td>Indica el tipo de archivo de la distribución, sólo si este está definido por IANA (http://www.iana.org/assignments/media-types/media-types.xml). En caso contrario este campo permanece vacío.                                                                                                                                                                                                                                                                                  </td><td>"text/csv" definición de IANA
 
 "" cuando el formato no tiene definición en IANA                                                                                                                                           </td><td>mediaType        </td><td>String </td></tr>
-<tr><td>Tamaño                                     </td><td>No         </td><td>Tamaño de la distribución en bytes. El tamaño puede ser aproximado cuando no se conozca el tamaño exacto.                                                                                                                                                                                                                                                                                                                                                                       </td><td>Ejemplo para un archivo de 5Kb aproximadamente: ”5120”                                                                                    </td><td>byteSize         </td><td>Integer</td></tr>
-<tr><td>Derechos sobre la distribución             </td><td>No         </td><td>Información sobre derechos aplicables a la distribución que no se hayan especificado en la licencia. Si se especifican, estos derechos sobreescriben a los del catálogo. En caso contrario, las distribuciones heredan los derechos especificados para el catálogo.                                                                                                                                                                                                             </td><td>nan                                                                                                                                       </td><td>rights           </td><td>String </td></tr>
 <tr><td>Tipo de distribución                       </td><td>R          </td><td>Indica el tipo de recurso.
 
 + "Archivo de datos" (file): archivo físico de algún formato de datos que se puede descargar.
 + "API" (api): documentación en línea de un servicio web de datos.
 + "Código" (code): repositorio o archivo con scripts utilizados para la generación, transformación, limpieza o validación de los datos de todo o parte del dataset.
 + "Documentación" (documentation): documentación metodológica sobre los datos de todo o parte del dataset.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </td><td>"file"                                                                                                                                    </td><td>type             </td><td>String </td></tr>
-<tr><td>Identificador del dataset                  </td><td>Si         </td><td>La clave que identifica al conjunto de datos al que pertenece (y bajo el que se agrupa) este recurso.                                                                                                                                                                                                                                                                                                                                                                           </td><td>"dataset-ejemplo-35782”                                                                                                                   </td><td>datasetIdentifier</td><td>String </td></tr>
+<tr><td>Cobertura geográfica                       </td><td>No         </td><td>Una región o lugar determinado al que el dataset haga referencia.
+
+Esta se puede expresar mediante diferentes estándares. Se recomienda el desarrollo de una guía de unidades territoriales y político-administrativas específica para el país que administra el catálogo, donde se especifiquen los códigos oficiales que deben usarse para señalar cobertura geográfica.
+
+Una región o un lugar determinado. Puede tomar valores:
+
+a) de países, provincias, departamentos, condados, municipios o localidades, según las recomendaciones de la guía de unidades territoriales o político-administrativas oficial del país que administra el catálogo.
+b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
+c) un punto geográfico representado por latitud/longitud.
+d) Si la referencia geográfica no está incluida en la guía de unidades territoriales o político-administrativas oficial, se puede indicar la URIs según geonames.org; ej :
+http://sws.geonames.org/6255146                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </td><td>"ARG" es el código para la República Argentina.
+
+"06007" es el código de un departamento en Argentina
+
+[-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
+
+[-58.111111, -35.111111] es un punto geográfico
+
+"http://sws.geonames.org/6255146"                                                                                                                                           </td><td>spatial          </td><td>String </td></tr>
 <tr><td>Cobertura temporal                         </td><td>No         </td><td>Período de tiempo cubierto por la distribución.
 
 El intervalo de tiempo está formado por una fecha de inicio y una de fin separadas por “/”, en formato ISO 8601, con el nivel de especificidad requerido por el dataset. Opcionalmente, se puede especificar una sola fecha (en lugar de dos) y esta se interpretará como la fecha de inicio, mientras que el final permanece no especificado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </td><td>2015-01-01/2015-12-31
@@ -244,23 +263,8 @@ El intervalo de tiempo está formado por una fecha de inicio y una de fin separa
 2015-01-01
 
 2015-01-01T00:45:00Z                                                                                                                                           </td><td>temporal         </td><td>String </td></tr>
-<tr><td>Cobertura geográfica                       </td><td>No         </td><td>Una región o lugar determinado al que el dataset haga referencia.
-
-Una región o un lugar determinado. Puede tomar valores:
-
-a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
-b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
-c) un punto geográfico representado por latitud/longitud.
-d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
-http://sws.geonames.org/6255146"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </td><td>"ARG" es el código para la República Argentina.
-
-"06007" es el código de un departamento
-
-[-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
-
-[-58.111111, -35.111111] es un punto geográfico
-
-"http://sws.geonames.org/6255146"                                                                                                                                           </td><td>spatial          </td><td>String </td></tr>
+<tr><td>Derechos sobre la distribución             </td><td>No         </td><td>Información sobre derechos aplicables a la distribución que no se hayan especificado en la licencia. Si se especifican, estos derechos sobreescriben a los del catálogo. En caso contrario, las distribuciones heredan los derechos especificados para el catálogo.                                                                                                                                                                                                             </td><td>nan                                                                                                                                       </td><td>rights           </td><td>String </td></tr>
+<tr><td>Tamaño                                     </td><td>No         </td><td>Tamaño de la distribución en bytes. El tamaño puede ser aproximado cuando no se conozca el tamaño exacto.                                                                                                                                                                                                                                                                                                                                                                       </td><td>Ejemplo para un archivo de 5Kb aproximadamente: ”5120”                                                                                    </td><td>byteSize         </td><td>Integer</td></tr>
 <tr><td>Nomencladores utilizados                   </td><td>No         </td><td>Nombres de los estándares de los códigos, nomencladores o clasificadores utilizados en la distribución.                                                                                                                                                                                                                                                                                                                                                                         </td><td>ISO 8601                                                                                                                                  </td><td>codelists        </td><td>String </td></tr>
 <tr><td>URLs documentación nomencladores           </td><td>No         </td><td>Hipervínculos a las fuentes oficiales de los códigos y estándares utilizados.                                                                                                                                                                                                                                                                                                                                                                                                   </td><td>https://www.w3.org/TR/NOTE-datetime                                                                                                       </td><td>codelistlink     </td><td>String </td></tr>
 </tbody>
@@ -273,7 +277,7 @@ http://sws.geonames.org/6255146"                                                
 <tr><th>Nombre              </th><th>Requerido  </th><th>Descripción                                                                                                                                                                                                 </th><th>Ejemplo                                                                                                                                                                                                                                                                                    </th><th>Variable   </th><th>Tipo  </th></tr>
 </thead>
 <tbody>
-<tr><td>Nombre              </td><td>R          </td><td>El nombre del campo tal como se denomina en el encabezado de la distribución. Véase la "Guía para la publicación de datos en formatos abiertos" para una adecuada elección del nombre de un campo. 
+<tr><td>Nombre              </td><td>R          </td><td>El nombre del campo tal como se denomina en el encabezado de la distribución.
 
 Se recomienda no exceder los 40 caracteres en la mayoría de los casos. En caso de que un título más largo se juzgue necesario o significativamente más claro, este no deberá exceder los 60 caracteres en ningún caso.
 
@@ -299,15 +303,17 @@ any: Campo que puede contener valores de cualquier tipo.                        
 <tr><td>Unidad de medida    </td><td>No         </td><td>La descripción de la unidad de medida en la que están expresados los valores del campo. Sólo se utiliza para campos de tipo numérico.                                                                       </td><td>Millones de pesos a precios de 1993                                                                                                                                                                                                                                                        </td><td>units      </td><td>String</td></tr>
 <tr><td>Cobertura geográfica</td><td>No         </td><td>Una región o lugar determinado al que el dataset haga referencia.
 
+Esta se puede expresar mediante diferentes estándares. Se recomienda el desarrollo de una guía de unidades territoriales y político-administrativas específica para el país que administra el catálogo, donde se especifiquen los códigos oficiales que deben usarse para señalar cobertura geográfica.
+
 Una región o un lugar determinado. Puede tomar valores:
 
-a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
+a) de países, provincias, departamentos, condados, municipios o localidades, según las recomendaciones de la guía de unidades territoriales o político-administrativas oficial del país que administra el catálogo.
 b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
 c) un punto geográfico representado por latitud/longitud.
-d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
-http://sws.geonames.org/6255146"                                                                                                                                                                                                             </td><td>"ARG" es el código para la República Argentina.
+d) Si la referencia geográfica no está incluida en la guía de unidades territoriales o político-administrativas oficial, se puede indicar la URIs según geonames.org; ej :
+http://sws.geonames.org/6255146                                                                                                                                                                                                             </td><td>"ARG" es el código para la República Argentina.
 
-"06007" es el código de un departamento
+"06007" es el código de un departamento en Argentina
 
 [-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
 

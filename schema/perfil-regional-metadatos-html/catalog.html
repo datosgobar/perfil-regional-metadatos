@@ -75,7 +75,7 @@ Puede definirse 1 o más lenguajes en una lista. (Link a los estándares ISO: ht
 
 Compone una lista de temas que se pueden usar para clasificar los datasets del catálogo. Si se clasifica a algún dataset del catálogo como perteneciente a uno o más temas, este campo es obligatorio ya que se debe explicitar una taxonomía temática para poder usar sus temas.
 
-Para catálogos nacionales o que reúnen datasets de temáticas variadas, se recomienda utilizar la taxonomía temática de la Unión Europea (Ver standards/themeTaxonomy).</td><td>[{...}, {...}]</td><td>themeTaxonomy</td><td>Array</td>
+Para catálogos nacionales o que reúnen datasets de temáticas variadas, se recomienda utilizar la taxonomía temática de la Unión Europea (Ver standards/themeTaxonomy). Esta taxonomía está formada por 13 temas generales, bajo los cuales cualquier activo de datos puede ser clasificado. Sin embargo algunos países podrían querer desarrollar una taxonomía temática más detallada, con temas más específicos.</td><td>[{...}, {...}]</td><td>themeTaxonomy</td><td>Array</td>
 </tr>
 <tr style="background-color: #ffffff">
 <td>Licencia</td><td>R</td><td>Indica la licencia bajo la cual todos los datasets y distribuciones del catálogo están disponibles mediante un enlace a la licencia o documento de la licencia seleccionada, o mediante el título textual de la licencia tal como aparece en la lista de http://opendefinition.org/licenses/.
@@ -88,20 +88,22 @@ Se recomienda utilizar la licencia &quot;Open Database License (ODbL) v1.0&quot;
 <td>Página web del catálogo</td><td>R</td><td>Dirección web o enlace de acceso a la página principal del catálogo</td><td>http://datos.gob.ar</td><td>homepage</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Derechos sobre el catálogo</td><td>No</td><td>Información sobre derechos aplicables al catálogo en el caso que no se hayan especificado en la licencia. Los datasets y sus distribuciones heredan la información sobre derechos aplicables al catálogo, a menos que especifiquen unos derechos distintos.</td><td>&nbsp;</td><td>rights</td><td>String</td>
+<td>Version del perfil de metadatos</td><td>R</td><td>Es la versión del perfil de metadatos utilizada en el catálogo.
+
+Se utiliza para que distintas aplicaciones reconozcan y validen los metadatos del catálogo, y las funcionalidades disponibles para distintos fines.</td><td>1.0</td><td>metadataSchemeVersion</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Cobertura geográfica</td><td>No</td><td>El área geográfica cubierta por el catálogo.
+<td>Cobertura geográfica</td><td>No</td><td>El área geográfica cubierta por el catálogo. Esta se puede expresar mediante diferentes estándares. Se recomienda el desarrollo de una guía de unidades territoriales y político-administrativas específica para el país que administra el catálogo, donde se especifiquen los códigos oficiales que deben usarse para señalar cobertura geográfica.
 
 Una región o un lugar determinado. Puede tomar valores:
 
-a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
+a) de países, provincias, departamentos, condados, municipios o localidades, según las recomendaciones de la guía de unidades territoriales o político-administrativas oficial del país que administra el catálogo.
 b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
 c) un punto geográfico representado por latitud/longitud.
-d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
+d) Si la referencia geográfica no está incluida en la guía de unidades territoriales o político-administrativas oficial, se puede indicar la URIs según geonames.org; ej :
 http://sws.geonames.org/6255146</td><td>&quot;ARG&quot; es el código para la República Argentina.
 
-&quot;06007&quot; es el código de un departamento
+&quot;06007&quot; es el código de un departamento en Argentina
 
 [-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
 
@@ -110,9 +112,7 @@ http://sws.geonames.org/6255146</td><td>&quot;ARG&quot; es el código para la Re
 &quot;http://sws.geonames.org/6255146&quot;</td><td>spatial</td><td>String or Array</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Version del perfil de metadatos</td><td>R</td><td>Es la versión del perfil de metadatos utilizada en el catálogo.
-
-Se utiliza para que distintas aplicaciones reconozcan y validen los metadatos del catálogo, y las funcionalidades disponibles para distintos fines.</td><td>1.0</td><td>metadataSchemeVersion</td><td>String</td>
+<td>Derechos sobre el catálogo</td><td>No</td><td>Información sobre derechos aplicables al catálogo en el caso que no se hayan especificado en la licencia. Los datasets y sus distribuciones heredan la información sobre derechos aplicables al catálogo, a menos que especifiquen unos derechos distintos.</td><td>&nbsp;</td><td>rights</td><td>String</td>
 </tr>
 </table>
 </body>
