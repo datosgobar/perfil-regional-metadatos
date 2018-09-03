@@ -26,20 +26,20 @@ def csv_to_html(csv_path):
 
 def generate_markdown_schema(schema_path):
     template = """
-Referencia
+Reference
 ===
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Esquema
+## Schema
 
 {schema}
 
-## Campos del perfil
+## Fields of the profile
 
-### Catálogo (`catalog`)
+### Catalogue (`catalog`)
 
 {catalog}
 
@@ -47,15 +47,15 @@ Referencia
 
 {dataset}
 
-### Distribución (`distribution`)
+### Distribution (`distribution`)
 
 {distribution}
 
-### Campo (`field`)
+### Field (`field`)
 
 {field}
 
-### Tema (`theme`)
+### Theme (`theme`)
 
 {theme}
 """

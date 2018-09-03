@@ -1,69 +1,66 @@
-"Nombre","Requerido","Descripción","Ejemplo","Variable","Tipo"
-"Identificador","R","Es el identificador único del catálogo dentro de la red de catálogos de datos abiertos a la que pertenece. Este identificador puede ser otorgado por el área a cargo de la política de apertura de un país a sus organismos, o establecido por alguna convención internacional para el caso de catálogos de jerarquía jurisdiccional nacional.
+"Name","Required","Description","Example","Variable","Type"
+"Identifier","R","It's a unique identifier of the catalogue inside the open data catalogue network where it belongs. This identifier can be granted by the area in charge of open data policy of a country to its organisms, or established following any international convention in the case of catalogues of national jurisdiction hierarchy.
 
-El identificador debe ser una o más palabras en minúsculas, separadas con guiones medios, sin usar caracteres especiales. Identifica en forma breve, sucinta y declarativa al catálogo.","""energia""
+The identifier must be one or more words in lower case, separated by ""-"", without using special characters. Identifies the catalogue in a short and declarative way.","""energy""
 
-""desarrollo-social""
-
-""justicia""
+""justice""
 
 ""argentina""
 
 ""mexico""","identifier","String"
-"Título","Si","Nombre dado al catálogo. Debe ser claro, breve y lo suficientemente abstracto como para abarcar la multiplicidad de datasets que contiene.","Datos Argentina","title","String"
-"Descripción","Si","Descripción del contenido del catálogo.","Portal de Datos Abiertos del Gobierno de la República Argentina","description","String"
-"Autor","Si","Autoridad responsable de la publicación del catálogo.","Ministerio de Modernización","publisher -> name","String"
-"Correo electrónico del autor","Si","Correo electrónico de contacto de la autoridad responsable de la publicación del catálogo.","datos@modernizacion.gob.ar","publisher -> mbox","String"
-"Datasets","Si","Contiene una lista de los datasets que forman parte del catálogo.","[{...}, {...}]","dataset","Array"
-"Fecha de creación o publicación","R","Fecha de creación o publicación del catálogo. Se escribe según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.","""2016-04-14T19:48:05.433640"" para especificar fecha y hora
+"Title","Yes","Name given to the catalogue. Should be clear, short and abstract enough to include the diversity of datasets contained.","Argentina's Data","title","String"
+"Description","Yes","Description of catalogue contents.","Open Data Portal of Argentina's National Administration.","description","String"
+"Author","Yes","Responsibile authority of catalogue publication.","Ministry of Modernization","publisher -> name","String"
+"Author e-mail","Yes","Responsibile authority of catalogue publication e-mail.","datos@modernizacion.gob.ar","publisher -> mbox","String"
+"Datasets","Yes","List of datasets of the catalogue.","[{...}, {...}]","dataset","Array"
+"Date of creation or publication","R","Date of creation or publication of the catalog. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
 
-""2016-04-14"" para especificar fecha únicamente","issued","String"
-"Fecha de última actualización/ modificación","R","Fecha de última actualización/modificación del catálogo (ya sea de sus datos o de sus metadatos). Se escribe según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.","""2016-04-19T19:48:05.433640"" para especificar fecha y hora
+""2016-04-14"" specifies date only","issued","String"
+"Date of last modification or update of data or metadata","R","Date of last modification or update of any data or metadata in the catalogue. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
 
-""2016-04-19"" para especificar fecha únicamente","modified","String"
-"Fecha de última actualización/ modificación","No","Fecha de última actualización/modificación de los datos del catálogo. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el catálogo.","""2016-04-19T19:48:05.433640"" para especificar fecha y hora
+""2016-04-14"" specifies date only","modified","String"
+"Date of last modification or update of data","No","Date of last modification or update of any data in the catalogue. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
 
-""2016-04-19"" para especificar fecha únicamente","dataModified","String"
-"Fecha de última actualización/ modificación","No","Fecha de última actualización/modificación de los metadatos del catálogo. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el catálogo.","""2016-04-19T19:48:05.433640"" para especificar fecha y hora
+""2016-04-14"" specifies date only","dataModified","String"
+"Date of last modification or update of metadata","No","Date of last modification or update of any metadata in the catalogue. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
 
-""2016-04-19"" para especificar fecha únicamente","metadataModified","String"
-"Idioma(s)","R","Lenguaje para la descripción de los metadatos de los datasets contenidos en el catálogo. Hay 2 estándares ISO que pueden ser utilizados para este campo:
+""2016-04-14"" specifies date only","metadataModified","String"
+"Languages","R","Language(s) for metadata in this catalogue. There are 2 ISO standards that can be used in this field:
 
-(a) ISO 639-1 (2 letras)
-(b) ISO 639-2/T (3 letras) es el más recomendado.
+(a) ISO 639-1 (2 letters as ""en"" or ""es"")
+(b) ISO 639-2/T (3 letters as ""eng"" or ""esp"" - this is the most recommended one)
 
-Puede definirse 1 o más lenguajes en una lista. (Link a los estándares ISO: https://www.loc.gov/standards/iso639-2/php/code_list.php)","[""es""] para un lenguaje ISO 639-1
+1 or more languages can be defined in the list. (Link to ISO standards: https://www.loc.gov/standards/iso639-2/php/code_list.php)","[""es""] for a language in ISO 639-1
 
-[""spa"", ”eng""] para dos lenguajes ISO 639-2","language","Array"
-"Taxonomía temática","R","Es el sistema de clasificación temática, creado por la organización responsable del catálogo.
+[""spa"", ”eng""] for two languages in ISO 639-2","language","Array"
+"Theme taxonomy","R","Is the system of theme classification, created by the organization responsible of the catalogue.
 
-Compone una lista de temas que se pueden usar para clasificar los datasets del catálogo. Si se clasifica a algún dataset del catálogo como perteneciente a uno o más temas, este campo es obligatorio ya que se debe explicitar una taxonomía temática para poder usar sus temas.
+Defines a list of themes that can be used to classify datasets in this catalogue. If there is at least one dataset classified as having one or more themes in the catalogue, this metadata field is mandatory because it is neccessary to make explicit the theme taxonomy available to use a theme for a dataset.
 
-Para catálogos nacionales o que reúnen datasets de temáticas variadas, se recomienda utilizar la taxonomía temática de la Unión Europea (Ver standards/themeTaxonomy).","[{...}, {...}]","themeTaxonomy","Array"
-"Licencia","R","Indica la licencia bajo la cual todos los datasets y distribuciones del catálogo están disponibles mediante un enlace a la licencia o documento de la licencia seleccionada, o mediante el título textual de la licencia tal como aparece en la lista de http://opendefinition.org/licenses/.
+For national catalogues, or others that have a broad variety datasets of different themes, it is recommended to use the European Union theme taxonomy (see standards/themeTaxonomy in the repository). This taxonomy has 13 general themes, under wicho any dataset can be classified. Nevertheless, some countries could prefer to develop a more detailed theme taxonomy, with more specific themes.","[{...}, {...}]","themeTaxonomy","Array"
+"License","R","License under wich all datasets and distributions are available to use. This should be a link to the selected license defined in the web or the specific strings that acts as a title as it appears in the Open Definition list of licenses (https://licenses.opendefinition.org/).
 
-Se recomienda utilizar la licencia ""Open Database License (ODbL) v1.0"". Un dataset o distribución que especifique una licencia diferente, sobreescribe a la licencia general del catálogo.","""http://opendatacommons.org/licenses/dbcl/1-0/"" si se utiliza un enlace
+It is recommended using ""Creative Commons 4.0"" as it covers data and contents, and is available in English and Spanish. A dataset or distribution specifying a different license, overwrites the general license of the catalogue.","""https://creativecommons.org/licenses/by/4.0/"" if using a link
 
-""Open Database License (ODbL) v1.0"" si se consigna el nombre de la licencia a utilizar","license","String"
-"Página web del catálogo","R","Dirección web o enlace de acceso a la página principal del catálogo","http://datos.gob.ar","homepage","String"
-"Derechos sobre el catálogo","No","Información sobre derechos aplicables al catálogo en el caso que no se hayan especificado en la licencia. Los datasets y sus distribuciones heredan la información sobre derechos aplicables al catálogo, a menos que especifiquen unos derechos distintos.","","rights","String"
-"Cobertura geográfica","No","El área geográfica cubierta por el catálogo.
+""Creative Commons 4.0"" if using the name of the license","license","String"
+"Catalog web site","R","Access URL to the landing page of the catalogue, if any.","http://datos.gob.ar","homepage","String"
+"Metadata schema version","R","Is the metadata scheme version used in the catalogue.
 
-Una región o un lugar determinado. Puede tomar valores:
+It should be used for applications to recongize and validate metadata of this catalogue, and be able to safely build functionality upon a certain metadata scheme they can trust. ","1.0","metadataSchemeVersion","String"
+"Spatial coverage","No","Is the spatial area covered by the catalogue. This can be expressed using very different standards. It is recommended to develop a guide of territorial and administrative units specific to the country that manages the catalogue, where official codes are used to express spatial coverage.
 
-a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
-b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
-c) un punto geográfico representado por latitud/longitud.
-d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
-http://sws.geonames.org/6255146","""ARG"" es el código para la República Argentina.
+A certain region or place. Can have different values:
 
-""06007"" es el código de un departamento
+a) of countries, provinces, departments, counties, municipalities or cities, under the recommendations of the guide of territorial and administrative units of the country that is managing the catalogue.
+b) an area of coordinates (or bounding box) represented by latitude / longitude in this order: minimum longitude, minimum latitude, maximum longitude, maximum latitude.
+c) a geographical point represented by latitude / longitude.
+d) if the geographical reference is not included in the official guide of territorial and administrative units of the country, can be referenced using a geonames URI from geonames.org as: http://sws.geonames.org/6255146","""ARG"" is the code for Argentina.
 
-[-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
+""06007"" is the official code of a ""department"" in Argentina
 
-[-58.111111, -35.111111] es un punto geográfico
+[-58.111111, -35.111111, -57.111111, -33.111111] it's a bounding box
+
+[-58.111111, -35.111111] it's a geographical point
 
 ""http://sws.geonames.org/6255146""","spatial","String or Array"
-"Version del perfil de metadatos","R","Es la versión del perfil de metadatos utilizada en el catálogo.
-
-Se utiliza para que distintas aplicaciones reconozcan y validen los metadatos del catálogo, y las funcionalidades disponibles para distintos fines.","1.0","metadataSchemeVersion","String"
+"Additional rights or terms and conditions of the catalogue","No","Information about additional rights or terms or conditions applyable to the catalogue, in case they are not covered by the license. Datasets and distributions inherit this additional terms, unless different terms are specified in particular cases.","","rights","String"

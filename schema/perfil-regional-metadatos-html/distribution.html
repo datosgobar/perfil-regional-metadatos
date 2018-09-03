@@ -7,86 +7,98 @@
 <body>
 <table border="1" cellpadding="2" cellspacing="0">
 <tr style="font-weight: bold; background-color: #aaa;">
-<td>Nombre</td><td>Requerido</td><td>Descripción</td><td>Ejemplo</td><td>Variable</td><td>Tipo</td>
+<td>Name</td><td>Required</td><td>Description</td><td>Example</td><td>Variable</td><td>Type</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Identificador</td><td>Si</td><td>Identificador único de la distribución, este identificador debe ser único para la distribución dentro del catálogo completo.
+<td>Identifier</td><td>Yes</td><td>Unique identifier of the distribution. This identifier must be unique within the catalogue.
 
-Debe estar compuesto por letras mayúsculas o minúsculas de la &quot;a&quot; a la &quot;z&quot; sin caracteres especiales (sin tildes y sin la &quot;ñ&quot;), números, guiones bajos &quot;_&quot;, guiones medios &quot;-&quot; y puntos &quot;.&quot;.</td><td>1.2</td><td>identifier</td><td>String</td>
+The identifier should use lower or upper letter from &quot;a&quot; to &quot;z&quot; without using special characters (no accents and no &quot;ñ&quot;), numbers, underscores &quot;_&quot;, hypens &quot;-&quot; and dots &quot;.&quot;.</td><td>1.2</td><td>identifier</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Título</td><td>Si</td><td>Nombre asignado a la distribución.</td><td>Convocatorias abiertas durante el año 2015</td><td>title</td><td>String</td>
+<td>Dataset identifier</td><td>Yes</td><td>Unique identifier of the dataset where this distribution belongs.</td><td>&quot;dataset-example-35782”</td><td>datasetIdentifier</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Descripción</td><td>R</td><td>Breve descripción de la distribución. Se recomienda no escribir más de una línea. Toda información adicional puede ser incluida en la descripción del dataset.</td><td>Listado de las convocatorias abiertas durante el año 2015 en el sistema de contrataciones electrónicas</td><td>description</td><td>String</td>
+<td>Title</td><td>Yes</td><td>Name assigned to the distribution.</td><td>Contracts open in 2015</td><td>title</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>URL de descarga</td><td>Si</td><td>URL que permite la descarga directa de la distribución del dataset, vincula directamente a un archivo descargable en un formato dado.</td><td>http://datos.gob.ar/dataset/becaceb2-dbd0-4879-93bd-5f02bd3b8ca2/resource/bf2f67f4-9ab3-479b-a881-56b43565125e/download/contratos-2015.csv</td><td>downloadURL</td><td>String</td>
+<td>Description</td><td>R</td><td>Short description of the distribution. It is recommended not writing more than one line. Any other additional information can be included in the description.</td><td>List of contracts that were open during 2015 in the System of Electronic Contracts.</td><td>description</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>URL de acceso</td><td>Si</td><td>URL que permite el acceso a la distribución del dataset. Puede ser una página, feed u otro tipo de recurso que dé acceso indirecto a las distribuciones. Si las distribuciones son solo accesibles a través de la página de referencia del dataset, debe completarse el valor de la URL de acceso a la distribución con el mismo valor de la página de referencia del dataset.</td><td>http://datos.gob.ar/dataset/sistema-de-contrataciones-electronicas-argentina-compra/archivo/fa3603b3-0af7-43cc-9da9-90a512217d8a</td><td>accessURL</td><td>String</td>
+<td>Download URL</td><td>Yes</td><td>URL that allows direct download of the distribution Links directly to a downloadable file of a certain format.</td><td>http://datos.gob.ar/dataset/becaceb2-dbd0-4879-93bd-5f02bd3b8ca2/resource/bf2f67f4-9ab3-479b-a881-56b43565125e/download/contratos-2015.csv</td><td>downloadURL</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Campos de la distribución</td><td>R</td><td>Lista de campos que contiene una distribución tabular (no aplica para aquellas distribuciones que no sean tablas) y sus metadatos. Cada campo se representa con un objeto (&quot;{}&quot;) donde se describen los metadatos especificados para la clase &quot;field&quot; de este perfil de metadatos (como &quot;nombre&quot;, &quot;tipo&quot; y &quot;descripción&quot;).</td><td>[{...}, {...}]</td><td>field</td><td>Array</td>
+<td>Access URL</td><td>Yes</td><td>URL that allows access to the distribution, through a web site, feed or other resource giving indirect access to the resource. If distributions are only accessible through the landing page of the dataset, this metadata field must be completed with the same value as the dataset landing page.</td><td>http://datos.gob.ar/dataset/sistema-de-contrataciones-electronicas-argentina-compra/archivo/fa3603b3-0af7-43cc-9da9-90a512217d8a</td><td>accessURL</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Fecha de publicación</td><td>Si</td><td>Fecha de publicación de la distribución. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.</td><td>&quot;2016-04-14T19:48:05.433640&quot; para especificar fecha y hora
-
-&quot;2016-04-14&quot; para especificar fecha únicamente</td><td>issued</td><td>String</td>
+<td>Fields of the distribution</td><td>R</td><td>List of fields that a tabular distribution contains (it doesn&#39;t apply to non tabular distributions) and its metadata. Each field is represente by an object (&quot;{}&quot;) where metadata of the Field class are specified.</td><td>[{...}, {...}]</td><td>field</td><td>Array</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Fecha de última actualización/ modificación</td><td>R</td><td>Fecha de última actualización/modificación de la distribución. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
+<td>Date of creation or publication</td><td>Yes</td><td>Date of creation or publication of the distribution or resource. It&#39;s written following ISO-8601 format, using either the complete forme (date and time) or only the date part.</td><td>&quot;2016-04-14T19:48:05.433640&quot; specifies date and time
 
-&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>modified</td><td>String</td>
+&quot;2016-04-14&quot; specifies date only</td><td>issued</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Fecha de última actualización/ modificación</td><td>R</td><td>Fecha de última actualización/modificación de los datos del distribución. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el distribución.
-</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
+<td>Date of last modification or update of data or metadata</td><td>R</td><td>Date of last modification or update of any data or metadata in the distribution or resource. It&#39;s written following ISO-8601 format, using either the complete forme (date and time) or only the date part.</td><td>&quot;2016-04-14T19:48:05.433640&quot; specifies date and time
 
-&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>dataModified</td><td>String</td>
+&quot;2016-04-14&quot; specifies date only</td><td>modified</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Fecha de última actualización/ modificación</td><td>R</td><td>Fecha de última actualización/modificación de los metadatos del distribución. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el distribución.
-</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
+<td>Date of last modification or update of data</td><td>R</td><td>Date of last modification or update of any data in the distribution or resource. It&#39;s written following ISO-8601 format, using either the complete forme (date and time) or only the date part.</td><td>&quot;2016-04-14T19:48:05.433640&quot; specifies date and time
 
-&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>metadataModified</td><td>String</td>
+&quot;2016-04-14&quot; specifies date only</td><td>dataModified</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Formato del archivo</td><td>R</td><td>Indica el formato del archivo de la distribución. Si el tipo de la distribución está definido por IANA (http://www.iana.org/assignments/media-types/media-types.xml), debe usarse esa definición. En caso contrario deberán ponerse los caracteres después del punto final del archivo, que determinan el formato (cuando no está definido por IANA).</td><td>&quot;text/csv&quot; definición de IANA
+<td>Date of last modification or update of metadata</td><td>R</td><td>Date of last modification or update of any metadata in the distribution or resource. It&#39;s written following ISO-8601 format, using either the complete forme (date and time) or only the date part.</td><td>&quot;2016-04-14T19:48:05.433640&quot; specifies date and time
 
-&quot;csv&quot; caracteres finales después del punto</td><td>format</td><td>String</td>
+&quot;2016-04-14&quot; specifies date only</td><td>metadataModified</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Licencia</td><td>R</td><td>Indica la licencia bajo la cual la distribución está disponible mediante un enlace a la licencia o documento de la licencia seleccionada, o mediante el título textual de la licencia tal como aparece en la lista de http://opendefinition.org/licenses/ . Se recomienda utilizar la licencia &quot;Open Database License (ODbL) v1.0&quot;. Una distribución hereda por default la licencia del dataset al que pertenece, salvo que se especifique una licencia diferente en este campo.</td><td>&quot;http://opendatacommons.org/licenses/dbcl/1-0/&quot; si se utiliza un enlace
+<td>File format</td><td>R</td><td>Indicates the format of the file. If the type is defined by IANA (http://www.iana.org/assignments/media-types/media-types.xml), this definition can be used. In other case, the file extension (after the dot &quot;.&quot; in the file name) should be used.</td><td>&quot;text/csv&quot; IANA definition
 
-&quot;Open Database License (ODbL) v1.0&quot; si se consigna el nombre de la licencia a utilizar</td><td>license</td><td>String</td>
+&quot;csv&quot; file extension</td><td>format</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Tipo de archivo</td><td>No</td><td>Indica el tipo de archivo de la distribución, sólo si este está definido por IANA (http://www.iana.org/assignments/media-types/media-types.xml). En caso contrario este campo permanece vacío.</td><td>&quot;text/csv&quot; definición de IANA
+<td>License</td><td>R</td><td>License under wich this distribution is available to use. This should be a link to the selected license defined in the web or the specific strings that acts as a title as it appears in the Open Definition list of licenses (https://licenses.opendefinition.org/).
 
-&quot;&quot; cuando el formato no tiene definición en IANA</td><td>mediaType</td><td>String</td>
+It is recommended using &quot;Creative Commons 4.0&quot; as it covers data and contents, and is available in English and Spanish. If the license was specified at the level of dataset, it is not neccessary to use this field unless a different license applies.</td><td>&quot;https://creativecommons.org/licenses/by/4.0/&quot; if using a link
+
+&quot;Creative Commons 4.0&quot; if using the name of the license</td><td>license</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Tamaño</td><td>No</td><td>Tamaño de la distribución en bytes. El tamaño puede ser aproximado cuando no se conozca el tamaño exacto.</td><td>Ejemplo para un archivo de 5Kb aproximadamente: ”5120”</td><td>byteSize</td><td>Integer</td>
+<td>File type</td><td>No</td><td>Indicates the type of file of the distribution, only if this one is defined by IANA (http://www.iana.org/assignments/media-types/media-types.xml). If not defined, this field should remain empty.</td><td>&quot;text/csv&quot; IANA definition
+
+&quot;&quot; when there is no IANA definition</td><td>mediaType</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Derechos sobre la distribución</td><td>No</td><td>Información sobre derechos aplicables a la distribución que no se hayan especificado en la licencia. Si se especifican, estos derechos sobreescriben a los del catálogo. En caso contrario, las distribuciones heredan los derechos especificados para el catálogo.</td><td>&nbsp;</td><td>rights</td><td>String</td>
+<td>Resource type</td><td>R</td><td>Indicates the type of resource.
+
++ &quot;Data file&quot; (file): physical file of a certain format that can be downloaded.
++ &quot;API&quot; (api): api web documentation URL, of data web service.
++ &quot;Code&quot; (code): scripting file or repository used for the generation, transformation, cleaning or validation of all or part of the data contained in the dataset.
++ &quot;Documentation&quot; (documentation): methodological documentation of all or part of the data in this dataset.</td><td>&quot;file&quot;</td><td>type</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Tipo de distribución</td><td>R</td><td>Indica el tipo de recurso.
+<td>Spatial coverage</td><td>No</td><td>Is the spatial area covered by the distribution. This can be expressed using very different standards. It is recommended to develop a guide of territorial and administrative units specific to the country that manages the catalogue, where official codes are used to express spatial coverage.
 
-+ &quot;Archivo de datos&quot; (file): archivo físico de algún formato de datos que se puede descargar.
-+ &quot;API&quot; (api): documentación en línea de un servicio web de datos.
-+ &quot;Código&quot; (code): repositorio o archivo con scripts utilizados para la generación, transformación, limpieza o validación de los datos de todo o parte del dataset.
-+ &quot;Documentación&quot; (documentation): documentación metodológica sobre los datos de todo o parte del dataset.</td><td>&quot;file&quot;</td><td>type</td><td>String</td>
+A certain region or place. Can have different values:
+
+a) of countries, provinces, departments, counties, municipalities or cities, under the recommendations of the guide of territorial and administrative units of the country that is managing the catalogue.
+b) an area of coordinates (or bounding box) represented by latitude / longitude in this order: minimum longitude, minimum latitude, maximum longitude, maximum latitude.
+c) a geographical point represented by latitude / longitude.
+d) if the geographical reference is not included in the official guide of territorial and administrative units of the country, can be referenced using a geonames URI from geonames.org as: http://sws.geonames.org/6255146</td><td>&quot;ARG&quot; is the code for Argentina.
+
+&quot;06007&quot; is the official code of a &quot;department&quot; in Argentina
+
+[-58.111111, -35.111111, -57.111111, -33.111111] it&#39;s a bounding box
+
+[-58.111111, -35.111111] it&#39;s a geographical point
+
+&quot;http://sws.geonames.org/6255146&quot;</td><td>spatial</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Identificador del dataset</td><td>Si</td><td>La clave que identifica al conjunto de datos al que pertenece (y bajo el que se agrupa) este recurso.</td><td>&quot;dataset-ejemplo-35782”</td><td>datasetIdentifier</td><td>String</td>
-</tr>
-<tr style="background-color: #ffffff">
-<td>Cobertura temporal</td><td>No</td><td>Período de tiempo cubierto por la distribución.
+<td>Temporal coverage</td><td>No</td><td>Time period covered by the distribution.
 
-El intervalo de tiempo está formado por una fecha de inicio y una de fin separadas por “/”, en formato ISO 8601, con el nivel de especificidad requerido por el dataset. Opcionalmente, se puede especificar una sola fecha (en lugar de dos) y esta se interpretará como la fecha de inicio, mientras que el final permanece no especificado.</td><td>2015-01-01/2015-12-31
+The time period has an initial date and an end date, separated by &quot;/&quot;, written in ISO 8601 format using only date part or date &amp; time depending on the precission needed. Optionally, a single date can be specified (instead of two) and this one will be interpreted as an initial date, while the end date will remain unspecified (useful for datasets that are chronologically updated).</td><td>2015-01-01/2015-12-31
 
 2015-01-01T00:45:00Z/2016-01-15T00:06:00Z
 
@@ -94,30 +106,17 @@ El intervalo de tiempo está formado por una fecha de inicio y una de fin separa
 
 2015-01-01T00:45:00Z</td><td>temporal</td><td>String</td>
 </tr>
+<tr style="background-color: #ffffff">
+<td>Additional rights or terms and conditions of the distribution</td><td>No</td><td>Information about additional rights or terms or conditions applyable to the distribution, in case they are not covered by the license or the addictional rights specified for the catalog don&#39;t apply.</td><td>&nbsp;</td><td>rights</td><td>String</td>
+</tr>
 <tr style="background-color: #f0f0f0">
-<td>Cobertura geográfica</td><td>No</td><td>Una región o lugar determinado al que el dataset haga referencia.
-
-Una región o un lugar determinado. Puede tomar valores:
-
-a) de países y, provincias y municipios argentinos, según las recomendaciones de la “Guía para la identificación y uso de entidades interoperables”.
-b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
-c) un punto geográfico representado por latitud/longitud.
-d) Si la referencia geográfico no está identificada en la “Guía para la identificación y uso de entidades interoperables” indicar la URIs según geonames.org; ej :
-http://sws.geonames.org/6255146&quot;</td><td>&quot;ARG&quot; es el código para la República Argentina.
-
-&quot;06007&quot; es el código de un departamento
-
-[-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
-
-[-58.111111, -35.111111] es un punto geográfico
-
-&quot;http://sws.geonames.org/6255146&quot;</td><td>spatial</td><td>String</td>
+<td>Size</td><td>No</td><td>Size of the file in bytes. Can be approximate if exact size is not known.</td><td>Example for a 5kb file: ”5120”</td><td>byteSize</td><td>Integer</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Nomencladores utilizados</td><td>No</td><td>Nombres de los estándares de los códigos, nomencladores o clasificadores utilizados en la distribución.</td><td>ISO 8601</td><td>codelists</td><td>String</td>
+<td>Standard codes</td><td>No</td><td>Names of standard codes, nomenclators or classifiers used ni the distribution.</td><td>ISO 8601</td><td>codelists</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>URLs documentación nomencladores</td><td>No</td><td>Hipervínculos a las fuentes oficiales de los códigos y estándares utilizados.</td><td>https://www.w3.org/TR/NOTE-datetime</td><td>codelistlink</td><td>String</td>
+<td>Standard codes documentation URLs</td><td>No</td><td>Links to official sources of the codes and standards used.</td><td>https://www.w3.org/TR/NOTE-datetime</td><td>codelistlink</td><td>String</td>
 </tr>
 </table>
 </body>

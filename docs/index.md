@@ -1,29 +1,29 @@
-Perfil Regional de Metadatos
+Regional Metadata Profile
 ===
 
-# Introducción
+# Introduction
 
-El Perfil Regional de Metadatos (PRM) es una iniciativa del Grupo de Datos Abiertos de la Red GEALC de la Organización de Estados Americanos.
+The Regional Metadata Profile (RMP) is an initiative of the Open Data Group of the Organization of American States (OAS).
 
-Con él se busca construir una base común entre los países de la región que pueda ser una referencia y facilite las iniciativas de implementación de catálogos de datos abiertos, difundiendo soluciones comunes entre ellos.
+With this metadata profile, the group aims to build a common baseline between countries of the region that can be a reference and ease initiatives that need to implement open data catalogues, re-using common solutions.
 
-# Principios de diseño
+# Design principles
 
-El PRM fue pensado según los siguientes principios:
+The RMP was designed following these principles:
 
-* **Reutilizar lo existente**: si ya está resuelto por alguien, es preferible utilizar esa solución.
-* **Mejor un estándar que usan muchos.. que uno perfecto**: las soluciones que ya tienen amplia difusión garantizan adopción y un mínimo de interoperabilidad.
-* **Mejor usar algún estándar.. que ninguno**: si existe un caso de uso no cubierto, es preferible pensar una solución general y reutilizable, en lugar de una específica y difícil de escalar o interoperar.
+* **Re-use what already exists**: if something was solved by someone else, it is better to use that solution rather than inventing a new one.
+* **It is better a standard that many use.. rather than a perfect one**: solutions that are already broadly used guarantee adoption and a minimum of interoperability.
+* **Better using a standard.. than none**: if there is a use case not covered by any known standard, it is preferable to think a general and re-usable solution, rather than a specific one that can be hard to escalate or interoperate with other systems.
 
-Siguiendo estos 3 principios como guía, el Perfil Regional de Metadatos:
+Following this 3 principles as guidelines, the Regional Metadata Profile:
 
-* **Se basa en la aplicación europea de DCAT (DCAT-AP)**. Toma como base el perfil de metadatos de catálogos de datos abiertos de más amplia difusión, y lo extiende.
-* **Sigue la misma filosofía de extensibilidad que DCAT**
-    - Preserva el uso de todos los campos obligatorios.
-    - Si un campo no obligatorio está definido en el perfil base, es preferible utilizar ese antes de crear uno nuevo.
-    - Crea nuevos campos de metadatos, que resuelven casos de uso no previstos por DCAT-AP.
-* **Reutiliza soluciones en uso por los países de la región**. Agrega campos de metadatos adicionales en base a la experiencia de su uso en otros países.
-* **Define nombres de variables en inglés y en _lowerCamelCase_**, en sintonía con los nombres del perfil DCAT.
+* **It is based on european application of DCAT (DCAT-AP)**. Takes the metadata profile for implementing open data catalogues more broadly used as a baseline, and extends it.
+* **Follows same extensibility philosophy than DCAT**
+    - Preserves the use of all mandatory fields.
+    - If a non mandatory field is defined in the baseline, it is preferable using that one before creating a new one.
+    - Creates new metadata fields, solving use cases not included in DCAT-AP.
+* **Re-use solutions already in use by countries of the region**. Adding additional metadata fields from the previous use experience in other countries.
+* **Define variable names in English and _lowerCamelCase_**, following DCAT style.
 
 
 

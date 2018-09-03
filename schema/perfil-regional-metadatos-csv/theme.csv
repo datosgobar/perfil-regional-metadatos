@@ -1,4 +1,4 @@
-"Nombre","Requerido","Descripción","Ejemplo","Variable","Tipo"
-"Identificador","R","El identificador del tema.","AGRI","id","String"
-"Título","R","La etiqueta o título de un tema.","Agricultura, pesca, silvicultura y alimentación","label","String"
-"Descripción","R","Una breve y concisa descripción del tema.","Bajo este concepto se incluyen datasets que cubren dominios tales como agricultura, pesca, forestación o alimentos.","description","String"
+"Name","Required","Description","Example","Variable","Type"
+"Identifier","R","Theme unique identifier.","AGRI","id","String"
+"Title","R","Label or title of a theme.","Agriculture, fisheries, forestry and food","label","String"
+"Description","R","Short and precise description of the theme.","This concept identifies datasets covering such domains as agriculture, fisheries, forestry or food.","description","String"
