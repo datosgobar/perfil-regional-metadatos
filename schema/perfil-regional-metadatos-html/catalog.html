@@ -10,106 +10,109 @@
 <td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Name</td><td>Required</td><td>Description</td><td>Example</td><td>Variable</td><td>Type</td>
+<td>Nombre</td><td>Requerido</td><td>Descripción</td><td>Ejemplo</td><td>Variable</td><td>Tipo</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Identifier</td><td>R</td><td>It&#39;s a unique identifier of the catalogue inside the open data catalogue network where it belongs. This identifier can be granted by the area in charge of open data policy of a country to its organisms, or established following any international convention in the case of catalogues of national jurisdiction hierarchy.
+<td>Identificador</td><td>R</td><td>Es el identificador único del catálogo dentro de la red de catálogos de datos abiertos a la que pertenece. Este identificador puede ser otorgado por el área a cargo de la política de apertura de un país a sus organismos, o establecido por alguna convención internacional para el caso de catálogos de jerarquía jurisdiccional nacional.
 
-The identifier must be one or more words in lower case, separated by &quot;-&quot;, without using special characters. Identifies the catalogue in a short and declarative way.</td><td>&quot;energy&quot;
+El identificador debe ser una o más palabras en minúsculas, separadas con guiones medios, sin usar caracteres especiales. Identifica en forma breve, sucinta y declarativa al catálogo.</td><td>&quot;energia&quot;
 
-&quot;justice&quot;
+&quot;desarrollo-social&quot;
+
+&quot;justicia&quot;
 
 &quot;argentina&quot;
 
 &quot;mexico&quot;</td><td>identifier</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Title</td><td>Yes</td><td>Name given to the catalogue. Should be clear, short and abstract enough to include the diversity of datasets contained.</td><td>Argentina&#39;s Data</td><td>title</td><td>String</td>
+<td>Título</td><td>Si</td><td>Nombre dado al catálogo. Debe ser claro, breve y lo suficientemente abstracto como para abarcar la multiplicidad de datasets que contiene.</td><td>Datos Argentina</td><td>title</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Description</td><td>Yes</td><td>Description of catalogue contents.</td><td>Open Data Portal of Argentina&#39;s National Administration.</td><td>description</td><td>String</td>
+<td>Descripción</td><td>Si</td><td>Descripción del contenido del catálogo.</td><td>Portal de Datos Abiertos del Gobierno de la República Argentina</td><td>description</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Author</td><td>Yes</td><td>Responsibile authority of catalogue publication.</td><td>Ministry of Modernization</td><td>publisher -&gt; name</td><td>String</td>
+<td>Autor</td><td>Si</td><td>Autoridad responsable de la publicación del catálogo.</td><td>Ministerio de Modernización</td><td>publisher -&gt; name</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Author e-mail</td><td>Yes</td><td>Responsibile authority of catalogue publication e-mail.</td><td>datos@modernizacion.gob.ar</td><td>publisher -&gt; mbox</td><td>String</td>
+<td>Correo electrónico del autor</td><td>Si</td><td>Correo electrónico de contacto de la autoridad responsable de la publicación del catálogo.</td><td>datos@modernizacion.gob.ar</td><td>publisher -&gt; mbox</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Datasets</td><td>Yes</td><td>List of datasets of the catalogue.</td><td>[{...}, {...}]</td><td>dataset</td><td>Array</td>
+<td>Datasets</td><td>Si</td><td>Contiene una lista de los datasets que forman parte del catálogo.</td><td>[{...}, {...}]</td><td>dataset</td><td>Array</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Date of creation or publication</td><td>R</td><td>Date of creation or publication of the catalog. It&#39;s written following ISO-8601 format, using either the complete forme (date and time) or only the date part.</td><td>&quot;2016-04-14T19:48:05.433640&quot; specifies date and time
+<td>Fecha de creación o publicación</td><td>R</td><td>Fecha de creación o publicación del catálogo. Se escribe según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.</td><td>&quot;2016-04-14T19:48:05.433640&quot; para especificar fecha y hora
 
-&quot;2016-04-14&quot; specifies date only</td><td>issued</td><td>String</td>
+&quot;2016-04-14&quot; para especificar fecha únicamente</td><td>issued</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Date of last modification or update of data or metadata</td><td>R</td><td>Date of last modification or update of any data or metadata in the catalogue. It&#39;s written following ISO-8601 format, using either the complete forme (date and time) or only the date part.</td><td>&quot;2016-04-14T19:48:05.433640&quot; specifies date and time
+<td>Fecha de última actualización/ modificación</td><td>R</td><td>Fecha de última actualización/modificación del catálogo (ya sea de sus datos o de sus metadatos). Se escribe según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el dataset.</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
 
-&quot;2016-04-14&quot; specifies date only</td><td>modified</td><td>String</td>
+&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>modified</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Date of last modification or update of data</td><td>No</td><td>Date of last modification or update of any data in the catalogue. It&#39;s written following ISO-8601 format, using either the complete forme (date and time) or only the date part.</td><td>&quot;2016-04-14T19:48:05.433640&quot; specifies date and time
+<td>Fecha de última actualización/ modificación</td><td>No</td><td>Fecha de última actualización/modificación de los datos del catálogo. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el catálogo.</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
 
-&quot;2016-04-14&quot; specifies date only</td><td>dataModified</td><td>String</td>
+&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>dataModified</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Date of last modification or update of metadata</td><td>No</td><td>Date of last modification or update of any metadata in the catalogue. It&#39;s written following ISO-8601 format, using either the complete forme (date and time) or only the date part.</td><td>&quot;2016-04-14T19:48:05.433640&quot; specifies date and time
+<td>Fecha de última actualización/ modificación</td><td>No</td><td>Fecha de última actualización/modificación de los metadatos del catálogo. Según el formato ISO-8601, tipeado como fecha simple o fecha con hora, con el mayor detalle posible que sea relevante para el catálogo.</td><td>&quot;2016-04-19T19:48:05.433640&quot; para especificar fecha y hora
 
-&quot;2016-04-14&quot; specifies date only</td><td>metadataModified</td><td>String</td>
+&quot;2016-04-19&quot; para especificar fecha únicamente</td><td>metadataModified</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Languages</td><td>R</td><td>Language(s) for metadata in this catalogue. There are 2 ISO standards that can be used in this field:
+<td>Idioma(s)</td><td>R</td><td>Lenguaje para la descripción de los metadatos de los datasets contenidos en el catálogo. Hay 2 estándares ISO que pueden ser utilizados para este campo:
 
-(a) ISO 639-1 (2 letters as &quot;en&quot; or &quot;es&quot;)
-(b) ISO 639-2/T (3 letters as &quot;eng&quot; or &quot;esp&quot; - this is the most recommended one)
+(a) ISO 639-1 (2 letras)
+(b) ISO 639-2/T (3 letras) es el más recomendado.
 
-1 or more languages can be defined in the list. (Link to ISO standards: https://www.loc.gov/standards/iso639-2/php/code_list.php)</td><td>[&quot;es&quot;] for a language in ISO 639-1
+Puede definirse 1 o más lenguajes en una lista. (Link a los estándares ISO: https://www.loc.gov/standards/iso639-2/php/code_list.php)</td><td>[&quot;es&quot;] para un lenguaje ISO 639-1
 
-[&quot;spa&quot;, ”eng&quot;] for two languages in ISO 639-2</td><td>language</td><td>Array</td>
+[&quot;spa&quot;, ”eng&quot;] para dos lenguajes ISO 639-2</td><td>language</td><td>Array</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Theme taxonomy</td><td>R</td><td>Is the system of theme classification, created by the organization responsible of the catalogue.
+<td>Taxonomía temática</td><td>R</td><td>Es el sistema de clasificación temática, creado por la organización responsable del catálogo.
 
-Defines a list of themes that can be used to classify datasets in this catalogue. If there is at least one dataset classified as having one or more themes in the catalogue, this metadata field is mandatory because it is neccessary to make explicit the theme taxonomy available to use a theme for a dataset.
+Compone una lista de temas que se pueden usar para clasificar los datasets del catálogo. Si se clasifica a algún dataset del catálogo como perteneciente a uno o más temas, este campo es obligatorio ya que se debe explicitar una taxonomía temática para poder usar sus temas.
 
-For national catalogues, or others that have a broad variety datasets of different themes, it is recommended to use the European Union theme taxonomy (see standards/themeTaxonomy in the repository). This taxonomy has 13 general themes, under wicho any dataset can be classified. Nevertheless, some countries could prefer to develop a more detailed theme taxonomy, with more specific themes.</td><td>[{...}, {...}]</td><td>themeTaxonomy</td><td>Array</td>
+Para catálogos nacionales o que reúnen datasets de temáticas variadas, se recomienda utilizar la taxonomía temática de la Unión Europea (Ver standards/themeTaxonomy). Esta taxonomía está formada por 13 temas generales, bajo los cuales cualquier activo de datos puede ser clasificado. Sin embargo algunos países podrían querer desarrollar una taxonomía temática más detallada, con temas más específicos.</td><td>[{...}, {...}]</td><td>themeTaxonomy</td><td>Array</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>License</td><td>R</td><td>License under wich all datasets and distributions are available to use. This should be a link to the selected license defined in the web or the specific strings that acts as a title as it appears in the Open Definition list of licenses (https://licenses.opendefinition.org/).
+<td>Licencia</td><td>R</td><td>Indica la licencia bajo la cual todos los datasets y distribuciones del catálogo están disponibles mediante un enlace a la licencia o documento de la licencia seleccionada, o mediante el título textual de la licencia tal como aparece en la lista de http://opendefinition.org/licenses/.
 
-It is recommended using &quot;Creative Commons 4.0&quot; as it covers data and contents, and is available in English and Spanish. A dataset or distribution specifying a different license, overwrites the general license of the catalogue.</td><td>&quot;https://creativecommons.org/licenses/by/4.0/&quot; if using a link
+Se recomienda utilizar la licencia &quot;Open Database License (ODbL) v1.0&quot;. Un dataset o distribución que especifique una licencia diferente, sobreescribe a la licencia general del catálogo.</td><td>&quot;http://opendatacommons.org/licenses/dbcl/1-0/&quot; si se utiliza un enlace
 
-&quot;Creative Commons 4.0&quot; if using the name of the license</td><td>license</td><td>String</td>
+&quot;Open Database License (ODbL) v1.0&quot; si se consigna el nombre de la licencia a utilizar</td><td>license</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Catalog web site</td><td>R</td><td>Access URL to the landing page of the catalogue, if any.</td><td>http://datos.gob.ar</td><td>homepage</td><td>String</td>
+<td>Página web del catálogo</td><td>R</td><td>Dirección web o enlace de acceso a la página principal del catálogo</td><td>http://datos.gob.ar</td><td>homepage</td><td>String</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Metadata schema version</td><td>R</td><td>Is the metadata scheme version used in the catalogue.
+<td>Version del perfil de metadatos</td><td>R</td><td>Es la versión del perfil de metadatos utilizada en el catálogo.
 
-It should be used for applications to recongize and validate metadata of this catalogue, and be able to safely build functionality upon a certain metadata scheme they can trust. </td><td>1.0</td><td>metadataSchemeVersion</td><td>String</td>
+Se utiliza para que distintas aplicaciones reconozcan y validen los metadatos del catálogo, y las funcionalidades disponibles para distintos fines.</td><td>1.0</td><td>metadataSchemeVersion</td><td>String</td>
 </tr>
 <tr style="background-color: #f0f0f0">
-<td>Spatial coverage</td><td>No</td><td>Is the spatial area covered by the catalogue. This can be expressed using very different standards. It is recommended to develop a guide of territorial and administrative units specific to the country that manages the catalogue, where official codes are used to express spatial coverage.
+<td>Cobertura geográfica</td><td>No</td><td>El área geográfica cubierta por el catálogo. Esta se puede expresar mediante diferentes estándares. Se recomienda el desarrollo de una guía de unidades territoriales y político-administrativas específica para el país que administra el catálogo, donde se especifiquen los códigos oficiales que deben usarse para señalar cobertura geográfica.
 
-A certain region or place. Can have different values:
+Una región o un lugar determinado. Puede tomar valores:
 
-a) of countries, provinces, departments, counties, municipalities or cities, under the recommendations of the guide of territorial and administrative units of the country that is managing the catalogue.
-b) an area of coordinates (or bounding box) represented by latitude / longitude in this order: minimum longitude, minimum latitude, maximum longitude, maximum latitude.
-c) a geographical point represented by latitude / longitude.
-d) if the geographical reference is not included in the official guide of territorial and administrative units of the country, can be referenced using a geonames URI from geonames.org as: http://sws.geonames.org/6255146</td><td>&quot;ARG&quot; is the code for Argentina.
+a) de países, provincias, departamentos, condados, municipios o localidades, según las recomendaciones de la guía de unidades territoriales o político-administrativas oficial del país que administra el catálogo.
+b) un área de coordenadas representada por latitud/ longitud en el orden: minima longitud, minima latitud, maxima longitud, maxima latitud.
+c) un punto geográfico representado por latitud/longitud.
+d) Si la referencia geográfica no está incluida en la guía de unidades territoriales o político-administrativas oficial, se puede indicar la URIs según geonames.org; ej :
+http://sws.geonames.org/6255146</td><td>&quot;ARG&quot; es el código para la República Argentina.
 
-&quot;06007&quot; is the official code of a &quot;department&quot; in Argentina
+&quot;06007&quot; es el código de un departamento en Argentina
 
-[-58.111111, -35.111111, -57.111111, -33.111111] it&#39;s a bounding box
+[-58.111111, -35.111111, -57.111111, -33.111111] es un bounding box
 
-[-58.111111, -35.111111] it&#39;s a geographical point
+[-58.111111, -35.111111] es un punto geográfico
 
 &quot;http://sws.geonames.org/6255146&quot;</td><td>spatial</td><td>String or Array</td>
 </tr>
 <tr style="background-color: #ffffff">
-<td>Additional rights or terms and conditions of the catalogue</td><td>No</td><td>Information about additional rights or terms or conditions applyable to the catalogue, in case they are not covered by the license. Datasets and distributions inherit this additional terms, unless different terms are specified in particular cases.</td><td>&nbsp;</td><td>rights</td><td>String</td>
+<td>Derechos sobre el catálogo</td><td>No</td><td>Información sobre derechos aplicables al catálogo en el caso que no se hayan especificado en la licencia. Los datasets y sus distribuciones heredan la información sobre derechos aplicables al catálogo, a menos que especifiquen unos derechos distintos.</td><td>&nbsp;</td><td>rights</td><td>String</td>
 </tr>
 </table>
 </body>
